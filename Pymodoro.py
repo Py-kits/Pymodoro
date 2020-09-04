@@ -2,13 +2,16 @@ import os
 import time
 import tkinter as tk
 
-app.iconbitmap('path/to/ico/icon.ico')
+#app.iconbitmap('path/to/ico/icon.ico')
 
 Pymo_app = tk.Tk()
 Pymo_app.geometry('350x250')
 Pymo_app.title("Pymodoro")
 
-#def Pymo():
+#def Pymostart():
+#	ime = 0
+#	print ime
+
 # show timer at 00:00:00 -- display time
 # add one increment +1 per second -- 	 
 # Lap button adds current time to a list -- lap_list = []
@@ -16,21 +19,34 @@ Pymo_app.title("Pymodoro")
 # Stop button stops timer Stop(button)
 # 
 
-start_button = tk.Button (
+start_btn = tk.Button (
 	text="Start",
-	width="20",
-	height="5",
-	fg="black",	
-	bg="lightgrey"
-)
-# stop_button  = tk.Button (
-#	text="Stop",
-#	width="",
-#	height="",
+	width=10,
+	height=2,
 #	fg="black",	
-#	bg="lightgrey"
+#	bg="blue"
+)
 
-#	)
+stop_btn  = tk.Button (
+	text="Stop",
+	width=10,
+	height=2,
+#	fg="black",	
+#	bg="blue"
+)
+
+lap_btn  = tk.Button (
+	text="Lap",
+	width=10,
+	height=2,
+#	fg="black",	
+#	bg="blue"
+)
+
+start_btn.pack(side="right")
+stop_btn.pack(side="right")
+lap_btn.pack(side="right")
+
 # Resume_button  = tk.Button (
 #	text="Resume",
 #	width="",
@@ -39,11 +55,6 @@ start_button = tk.Button (
 #	bg="lightgrey"
 
 #	)
-# Lap_button  = tk.Button (
-#	text="Lap",
-#	width="",
-#	height="",
-#	fg="black",	
-#	bg="lightgrey"
-#	)
 
+
+Pymo_app.mainloop()
